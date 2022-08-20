@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Righteous&display=swap');
+/* 
+font-family: 'Inter', sans-serif;
+font-family: 'Righteous', cursive;
+*/
+
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --purple: #6042D8;
+    --purple-text: #400880;
+}
+
+body {
+    overflow-x: hidden;   
+    font-family: 'Inter', sans-serif;
+}
+
+/* CONTAINER GRID */
+.container {
+    display: grid;
+    grid-template-areas: "header"
+                         "main"
+                         "section"
+                         "footer"
+    ;
+}
+
+/* HEADER */
+header {
+    grid-area: header;
+
+    background: transparent;
+    padding: 50px 100px;
+
+    height: auto;
+    width: 100%;
+
+    position: absolute;
+    z-index: 10;
+}
+
+header img.logo_type {
+    width: 150px;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+header nav ul li {
+    list-style: none;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 5px 10px;
+    color: white;
+    background: transparent;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: .3s;
+}
+
+header nav ul li a.active {
+    background: white;
+    color: #001b38;
+    cursor: default;
+}
+
+header nav ul li a:hover {
+    background: white;
+    color: #001b38;
+}
+
+/* MAIN */
+main {
+    grid-area: main;
+
+    height: 100vh;
+    width: 100%;
+
+    position: relative;
+    z-index: 0;
+}
+
+main.home {
+    background-image: url(../img/img_main.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position-y: -100px;
+}
+
+main.home img {
+    width: 100%;
+    height: auto;
+    
+    position: absolute;
+    bottom: 0;
+}
+
+main.home .content {
+    width: 30%;
+    
+    position: absolute;
+    top: 35vh;
+    left: 100px;
+    z-index: 1;
+}
+
+main .title {
+    color: white;
+    font-size: 3em;
+}
+
+main .paragraph {
+    color: white;
+    font-size: 1em;
+}
+
+
+
+main.quiz {
+    background-image: url(../img/img_quiz.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: -100px;
+}
+
+main.quiz .content {
+    width: 30%;
+    
+    position: absolute;
+    top: 35vh;
+    right: 100px;
+    z-index: 1;
+}
+
+main.quiz img.astronaut {
+    width: auto;
+    position: absolute;
+    top: 5vh;
+    left: 20vw;
+    filter: drop-shadow(-100px 140px 10px rgba(0, 0, 0, 0.5));
+
+    transform: translateY(0);
+    animation: float 8s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: rotate(0) translateY(0);
+    }
+
+    50% {
+        transform: rotate(-10deg) translateY(-20px);
+    }
+
+    100% {
+        transform: rotate(0) translateY(0);
+    }
+}
+
+main.quiz img.vetor {
+    width: 50px;
+    cursor: pointer;
+
+    position: absolute;
+    bottom: 50px;
+    left: 48%;
+
+    transition: .3s;
+}
+
+main.quiz img.vetor:hover {
+    transform: translateY(10px);
+}
+
+/* SECTION */
+section {
+    grid-area: section;
+
+    background: white;  
+
+    height: auto;
+    width: 100%;
+
+    position: relative;
+    z-index: 0;
+}
+
+section .content:nth-child(1) {
+    padding: 0 25%;
+}
+
+section .title {
+    color: var(--purple-text);
+    font-size: 3em;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+section .paragraph {
+    color: var(--purple-text);
+    font-size: 1.2em;
+    text-align: center;
+}
+
+section .content:nth-child(2) {
+    padding: 100px 150px;
+}
+
+section .card-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+section .card {
+    background: linear-gradient(180deg, #260b50 0%, #6420be 100%);
+    padding: 30px 50px;
+    width: 300px;
+    height: 450px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 50px;
+    
+    border-radius: 10px;
+    transition: .5s;
+    cursor: pointer;
+}
+
+section .card:hover {
+    transform: translateY(-20px);
+    box-shadow: 0 20px 10px rgba(0, 0, 0, .5);
+}
+
+section .card div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    width: 100%;
+    height: 50%;
+}
+
+section .card img {
+    height: 100%;
+}
+
+section .card h2 {
+    color: white;
+    font-size: 2em;
+}
+
+section .card p {
+    color: white;
+    font-size: 1em;
+    text-align: center;
+}
+
+section .content:nth-child(3) h1 {
+    color: var(--purple-text);
+    font-size: 3em;
+    text-align: center;
+}
+
+/* FOOTER */
+footer {
+    grid-area: footer;
+
+    background: var(--purple-text);
+
+    height: 30vh;
+    width: 100%;
+
+    position: relative;
+    z-index: 0;
+}
