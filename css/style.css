@@ -1,11 +1,11 @@
+/* ------------------ RESET -------------------- */
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Righteous&display=swap');
 /* 
 font-family: 'Inter', sans-serif;
 font-family: 'Righteous', cursive;
 */
 
-
-/* RESET */
 * {
     margin: 0;
     padding: 0;
@@ -23,7 +23,9 @@ body {
     font-family: 'Inter', sans-serif;
 }
 
-/* CONTAINER GRID */
+/* ----------------------------------------------- */
+
+/* --------------- CONTAINER GRID ---------------- */
 .container {
     display: grid;
     grid-template-areas: "header"
@@ -33,7 +35,9 @@ body {
     ;
 }
 
-/* HEADER */
+/* ----------------------------------------------- */
+
+/* ------------------- HEADER -------------------- */
 header {
     grid-area: header;
 
@@ -90,7 +94,9 @@ header nav ul li a:hover {
     color: #001b38;
 }
 
-/* MAIN */
+/* ----------------------------------------------- */
+
+/* -------------------- MAIN --------------------- */
 main {
     grid-area: main;
 
@@ -102,7 +108,7 @@ main {
 }
 
 main.home {
-    background-image: url(../img/img_main.jpg);
+    background-image: url(../img/background_home.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -139,7 +145,7 @@ main .paragraph {
 
 
 main.quiz {
-    background-image: url(../img/img_quiz.png);
+    background-image: url(../img/background_quiz.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position-x: -100px;
@@ -194,7 +200,9 @@ main.quiz img.vetor:hover {
     transform: translateY(10px);
 }
 
-/* SECTION */
+/* ---------------------------------------------------------- */
+
+/* ------------------------ SECTION ------------------------- */
 section {
     grid-area: section;
 
@@ -228,15 +236,15 @@ section .content:nth-child(2) {
     padding: 100px 150px;
 }
 
-section .card-content {
+section .card_container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     gap: 50px;
 }
 
 section .card {
-    background: linear-gradient(180deg, #260b50 0%, #6420be 100%);
+    background: linear-gradient(180deg, #1a1438 0%, #381095 100%);
     padding: 30px 50px;
     width: 300px;
     height: 450px;
@@ -281,13 +289,32 @@ section .card p {
     text-align: center;
 }
 
-section .content:nth-child(3) h1 {
+section .content:nth-child(3) {
+    width: 100%;
+    height: auto;
+    padding: 100px 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+}
+
+
+section .content:nth-child(3) img {
+    width: 50%;
+}
+
+section .content:nth-child(4) h1 {
     color: var(--purple-text);
     font-size: 3em;
     text-align: center;
 }
 
-/* FOOTER */
+/* ----------------------------------------------------------- */
+
+/* ------------------------- FOOTER -------------------------- */
 footer {
     grid-area: footer;
 
@@ -299,3 +326,5 @@ footer {
     position: relative;
     z-index: 0;
 }
+
+/* ----------------------------------------------------------- */
