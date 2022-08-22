@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
 
+
     <title>Document</title>
 </head>
 <body>
@@ -14,7 +15,7 @@
             <nav>
                 <img class="logo_type" src="img/logo_type.png">
                 <ul>
-                    <li><a href="home.html">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="#">Mídias</a></li>
                     <li><a href="quiz.html" class="active">Quiz</a></li> 
                 </ul>
@@ -29,34 +30,145 @@
                 <p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla corrupti excepturi praesentium! Magnam, odio non beatae, sapiente illo, magni maiores enim temporibus veniam similique voluptatem. Deleniti debitis molestias autem minima!</p>
             </div>
 
-            <img class="vetor" src="img/vetor_quiz.png">
+            <a href="#pergunta1"><img class="vetor" src="img/vetor_quiz.png"></a>
         </main> <!-- main -->
 
-        <!-- <section class="quiz">
-            <div>
-                <img width="20%" src="img/quiz_teste_retangulo.png">
-                <div class="content">
-                    <h1>Jorge e Mateus</h1>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt, iure!</p>
-                </div>
-                
-                <form action="home.html" method="get" onsubmit="return certo()">
-                    <div>
-                        <input type="radio" id="1" name="1" value="certo">
-                        <label for="">Pedro</label>
+        <section class="quiz" id="pergunta1">
+            
+            <div class="caixa">
+
+                <h1>Anos-luz é uma medida de que?</h1>
+                <form action="#" onsubmit="return resposta()" method="post">
+                    <label for="a">
+                    <div class="opcao" id="opcao1">
+                        <input type="radio" name="resp" id="a" value="a">
+                        Distância
                     </div>
-                    <div>
-                        <input type="radio" id="1" name="1">
-                        <label for="">Jorge</label>
+                </label>
+                    <br>
+                    <label for="b">
+                    <div class="opcao" id="opcao2">
+                        <input type="radio" name="resp" id="b" value="b">
+                        Tempo
                     </div>
-                    <div>
-                        <input type="radio" id="1" name="1">
-                        <label for="">Mateus</label>
+                    </label>
+                    <br>
+                    <label for="c">
+                    <div class="opcao" id="opcao3">
+                        <input type="radio" name="resp" id="c" value="c">
+                        Peso
                     </div>
-                    <input type="submit" value="vaila">
-                </form>  
+                </label>
+                    <br>
+                    <label for="d">
+                    <div class="opcao" id="opcao4">
+                        <input type="radio" name="resp" id="d" value="d">
+                        Volume
+                    </div>
+                    </label>
+                    <br>
+                    <div class="caixa-botao">
+                        <input type="submit" class="botao" id="bconf" value="Confirmar">
+                    </div>
+                    <div class="caixa-botao" id="bpro">
+                        <button class="botao" onclick="document.getElementById('pergunta1').style.display = 'none'; document.getElementById('pergunta2').style.display = 'block'">Próximo</button>
+                    </div>
+                </form>
+    
             </div>
-        </section> -->
+
+        </section> 
+
+        <section class="quiz" id="pergunta2">
+            
+            <div class="caixa">
+
+                <h1>Qual é o sexto planeta que obita o Sol?</h1>
+                <form action="#" onsubmit="return resposta2()" method="post">
+                    <label for="a2">
+                    <div class="opcao" id="opcao1.2">
+                        <input type="radio" name="resp2" id="a2" value="a2">
+                        Júpiter
+                    </div>
+                </label>
+                    <br>
+                    <label for="b2">
+                    <div class="opcao" id="opcao2.2">
+                        <input type="radio" name="resp2" id="b2" value="b2">
+                        Saturno
+                    </div>
+                    </label>
+                    <br>
+                    <label for="c2">
+                    <div class="opcao" id="opcao3.2">
+                        <input type="radio" name="resp2" id="c2" value="c2">
+                        Urano
+                    </div>
+                </label>
+                    <br>
+                    <label for="d2">
+                    <div class="opcao" id="opcao4.2">
+                        <input type="radio" name="resp2" id="d2" value="d2">
+                        Marte
+                    </div>
+                    </label>
+                    <br>
+                    <div class="caixa-botao">
+                        <input type="submit" class="botao" id="bconf2" value="Confirmar">
+                    </div>
+                    <div class="caixa-botao" id="bpro2">
+                        <button class="botao" onclick="document.getElementById('pergunta2').style.display = 'none'; document.getElementById('pergunta3').style.display = 'block'">Próximo</button>
+                    </div>
+                </form>
+    
+            </div>
+        </section> 
+
+        <section class="quiz" id="pergunta3">
+            
+            <div class="caixa">
+
+                <h1>Qual é a galáxia mais próxima do Sistema Solar?</h1>
+                <form action="#" onsubmit="return resposta3()" method="post">
+                    <label for="a3">
+                    <div class="opcao" id="opcao1.3">
+                        <input type="radio" name="resp3" id="a3" value="a3">
+                        Galáxia de Andrômeda
+                    </div>
+                </label>
+                    <br>
+                    <label for="b3">
+                    <div class="opcao" id="opcao2.3">
+                        <input type="radio" name="resp3" id="b3" value="b3">
+                        Canis Major Dwarf
+                    </div>
+                    </label>
+                    <br>
+                    <label for="c3">
+                    <div class="opcao" id="opcao3.3"> 
+                        <input type="radio" name="resp3" id="c3" value="c3">
+                        A Grande Nuvem de Magalhães
+                    </div>
+                </label>
+                    <br>
+                    <label for="d3">
+                    <div class="opcao" id="opcao4.3">
+                        <input type="radio" name="resp3" id="d3" value="d3">
+                        Galáxia do Triângulo
+                    </div>
+                    </label>
+                    <br>
+                    <div class="caixa-botao">
+                        <input type="submit" class="botao" id="bconf3" value="Confirmar">
+                    </div>
+                    <div class="caixa-botao" id="bpro3">
+                        <button class="botao">Próximo</button>
+                    </div>
+                </form>
+    
+            </div>
+        </section> 
+    
 
         <footer>
             

@@ -110,9 +110,9 @@ main {
 main.home {
     background-image: url(../img/background_home.jpg);
     background-repeat: no-repeat;
-    background-size: cover;
     background-attachment: fixed;
     background-position-y: -100px;
+    background-position-x: -250px;
 }
 
 main.home img {
@@ -349,3 +349,71 @@ section.quiz div div.content , section.quiz div form  {
     align-items: flex-start;
     justify-content: center;
 } 
+
+/* ------------------------- QUIZ ------------------------- */
+.caixa {
+    background-image: url(../img/banner-quiz.jpg);
+    background-color: white;
+    width: 100%;
+    padding: 20px 50px;
+    border-style: solid;
+    border-width: 0.5px;
+    border-color: #400880;
+    border-radius: 7px;
+    margin: 100px auto;
+    color: white;
+}
+.opcao {
+    background-color: white;
+    margin-top: 12px;
+    color: black;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 2px;
+    border-color: white;
+    width: 200px;
+    padding: 10px;
+    text-align: left;
+    transform: all 0.5s;
+    transition: .3s;
+    cursor: pointer;
+}
+.opcao:hover {
+    border-color: #001b38;
+    background-color: white;
+    transform: scale(1.1);
+}
+.botao {
+    font-size: large;
+    margin-left: 0;
+    
+    width: 200px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    border-style: none;
+    background-color: #400880;
+    color: white;
+    padding: 10px;
+}
+
+.opcao-certa {
+    background-color: green;
+    color: white;
+}
+
+.opcao-errada {
+    border-color: red;
+    color: red;
+}
+
+input:checked {
+    color: yellow;
+}
+
+#bpro, #bpro2, #bpro3 {
+    display: none;
+}
+
+#pergunta2, #pergunta3 {
+    display: none;
+}
