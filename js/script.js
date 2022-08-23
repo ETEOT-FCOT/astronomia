@@ -174,3 +174,47 @@ function resposta4() {
 
     return false;
 }
+function resposta5() {
+    let resp = document.getElementsByName("resp5");
+    let op1 = document.getElementById("opcao1.5");
+    let op2 = document.getElementById("opcao2.5");
+    let op3 = document.getElementById("opcao3.5");
+    let op4 = document.getElementById("opcao4.5");
+    if (resp[1].checked == true) {
+    op1.style.color = "#9d0208"
+    op2.style.backgroundColor = "#80c423"
+    op2.style.color = "white"
+    op3.style.color = "#9d0208"
+    op4.style.color = "#9d0208"
+    
+    }
+    else {
+        if (resp[0].checked == true) {
+            op1.style.backgroundColor = "#9d0208"
+            op1.style.color = "white"
+            op2.style.color = "#80c423"
+            op3.style.color = "#9d0208"
+            op4.style.color = "#9d0208"
+        }
+        else if (resp[2].checked == true) {
+            op1.style.color = "#9d0208"
+            op2.style.color = "#80c423"
+            op3.style.backgroundColor = "#9d0208"
+            op3.style.color = "white"
+            op4.style.color = "#9d0208"
+        }
+        else if (resp[3].checked == true) {
+            op1.style.color = "#9d0208"
+            op2.style.color = "#80c423"
+            op3.style.color = "#9d0208"
+            op4.style.backgroundColor = "#9d0208"
+            op4.style.color = "white"
+        }
+    
+    }
+
+    document.getElementById("bconf5").style.display = "none";
+    document.getElementById("bpro5").style.display = "block"
+
+    return false;
+}
