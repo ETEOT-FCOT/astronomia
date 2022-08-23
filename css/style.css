@@ -410,10 +410,10 @@ input:checked {
     color: yellow;
 }
 
-#bpro, #bpro2, #bpro3 {
+#bpro, #bpro2, #bpro3, #bpro4, #bpro5, #bpro6, #bpro7, #bpro8, #bpro9, #bpro10 {
     display: none;
 }
 
-#pergunta2, #pergunta3 {
+#pergunta2, #pergunta3, #pergunta4, #pergunta5, #pergunta6, #pergunta7, #pergunta8, #pergunta9, #pergunta10 {
     display: none;
 }
