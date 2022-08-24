@@ -150,11 +150,13 @@ main.quiz {
     background-image: url(../img/background_quiz.png);
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
     background-position-x: -100px;
 }
 
 main.quiz .content {
     width: 30%;
+    text-align: right;
     
     position: absolute;
     top: 35vh;
@@ -166,11 +168,11 @@ main.quiz img.astronaut {
     width: auto;
     position: absolute;
     top: 5vh;
-    left: 20vw;
+    left: 16vw;
     filter: drop-shadow(-100px 140px 10px rgba(0, 0, 0, 0.5));
 
     transform: translateY(0);
-    animation: float 8s ease-in-out infinite;
+    animation: float 10s ease-in-out infinite;
 }
 
 @keyframes float {
@@ -179,7 +181,7 @@ main.quiz img.astronaut {
     }
 
     50% {
-        transform: rotate(-10deg) translateY(-20px);
+        transform: rotate(-20deg) translateY(-20px);
     }
 
     100% {
@@ -202,6 +204,65 @@ main.quiz img.vetor:hover {
     transform: translateY(10px);
 }
 
+main.quiz img.dec {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+
+
+
+main.sobre {
+    background-image: url(../img/background_sobre.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main.sobre img {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+main.sobre .content{
+    text-align: center;
+}
+
+
+
+main.midia {
+    background-image: url(../img/backgorund_midia.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main.midia img {
+    width: 100%;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+main.midia .content .title {
+    text-shadow: -1px 1px 0 gray, -2px 2px 0 rgb(109, 109, 109), -3px 3px 0 rgb(108, 108, 108), -4px 4px 0 rgb(107, 107, 107), -5px 5px 0 rgb(106, 106, 106), -7px 7px 5px rgba(0, 0, 0, .5);
+}
+
+main.midia .content {
+    width: 40%;
+    text-align: center;
+}
+
 /* ---------------------------------------------------------- */
 
 /* ------------------------ SECTION ------------------------- */
@@ -218,7 +279,7 @@ section {
 }
 
 section.home .content:nth-child(1) {
-    padding: 100px 200px;
+    padding: 50px 150px;
 }
 
 section.home .paragraph {
@@ -235,23 +296,29 @@ section.home .card_container {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 50px;
+}
+
+section.home .card_container a {
+    text-decoration: none;
 }
 
 section.home .card {
     background: linear-gradient(180deg, #1a1438 0%, #381095 100%);
-    padding: 30px 50px;
+    
     width: 300px;
     height: 450px;
 
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    gap: 50px;
     
     border-radius: 10px;
     transition: .5s;
     cursor: pointer;
+
+    position: relative;
 }
 
 section.home .card:hover {
@@ -264,13 +331,19 @@ section.home .card div {
     flex-direction: column;
     align-items: center;
     gap: 20px;
-
-    width: 100%;
-    height: 40%;
+    height: 33.33%;
 }
 
+section.home .card div:nth-child(1) {
+    margin: 30px 30px;
+} 
+
 section.home .card img {
-    height: 100%;
+    max-height: 200px;
+}
+
+section.home .card div:nth-child(2) {
+    margin: 30px 50px;
 }
 
 section.home .card h1 {
@@ -285,8 +358,20 @@ section.home .card p {
 }
 
 section.home .card div:nth-child(3) {
-    background-color: aqua;
+    background-color: #6248AE;
+    width: 100%;
+
+    border-radius: 0 0 10px 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+section.home .card div:nth-child(3) p {
+    letter-spacing: 1px;
+}
+
 
 section.home .content:nth-child(3) {
     background-color: #470898;
@@ -301,14 +386,13 @@ section.home .content:nth-child(3) {
     gap: 50px;
 }
 
-
 section.home .content:nth-child(3) div {
     width: 50%;
 }
 
 section.home .content:nth-child(3) div p {
     color: white;
-    font-size: 1.3em;
+    font-size: 2em;
 }
 
 section.home .content:nth-child(4) h1 {
@@ -317,22 +401,23 @@ section.home .content:nth-child(4) h1 {
     text-align: center;
 }
 
-/* ----------------------------------------------------------- */
 
-/* ------------------------- FOOTER -------------------------- */
-footer {
-    grid-area: footer;
 
-    background: #13002B;
-
-    height: 30vh;
-    width: 100%;
-
-    position: relative;
-    z-index: 0;
+section.sobre .grid-content {
+    padding: 50px 150px;
 }
 
-/* ----------------------------------------------------------- */
+section.sobre .paragraph {
+    color: var(--purple-text);
+    font-size: 1.4em;
+    text-align: justify;
+}
+
+section.sobre .paragraph span {
+    color: #1e0055;
+}
+
+
 
 section.quiz {
     display: flex;
@@ -354,6 +439,234 @@ section.quiz div div.content , section.quiz div form  {
     align-items: flex-start;
     justify-content: center;
 } 
+
+section .content {
+    padding: 50px 150px;
+}
+
+
+
+
+section.sobre .grid-content {
+    padding: 100px 200px;
+    border-radius: 10px;
+
+    display: grid;
+    
+    row-gap: 100px;
+    grid-template-columns: 1fr 1fr 1fr;
+    
+
+    grid-template-areas: "i1 t1 t1"
+                         "t2 t2 i2"
+                         "i3 t3 t3"
+                         "t4 t4 i4"
+                         "i5 t5 t5"
+                         "t6 t6 i6"
+                         "i7 t7 t7" 
+                         "t8 t8 i8";
+}
+
+section.sobre .grid-content img {
+    width: 100%;
+    height: 100%;
+}
+
+section.sobre .grid-content div {
+    background-color: #6042D8;
+    height: 50vh;
+}
+
+section.sobre .i1 {
+    grid-area: i1;
+    border-radius: 10px 0 0 10px;
+}
+
+section.sobre .t1 {
+    grid-area: t1;
+    border-radius: 0 10px 10px 0;
+}
+
+
+
+section.sobre .i2 {
+    grid-area: i2;
+    border-radius: 0 10px 10px 0;
+}
+
+section.sobre .t2 {
+    grid-area: t2;
+    border-radius: 10px 0 0 10px;
+}
+
+
+
+section.sobre .i3 {
+    grid-area: i3;
+    border-radius: 10px 0 0 10px;
+}
+
+section.sobre .t3 {
+    grid-area: t3;
+    border-radius: 0 10px 10px 0;
+}
+
+
+
+section.sobre .i4 {
+    grid-area: i4;
+    border-radius: 0 10px 10px 0;
+}
+
+section.sobre .t4 {
+    grid-area: t4;
+    border-radius: 10px 0 0 10px;
+}
+
+
+
+section.sobre .i5 {
+    grid-area: i5;
+    border-radius: 10px 0 0 10px;
+}
+
+section.sobre .t5 {
+    grid-area: t5;
+    border-radius: 0 10px 10px 0;
+}
+
+
+
+section.sobre .i6 {
+    grid-area: i6;
+    border-radius: 0 10px 10px 0;
+}
+
+section.sobre .t6 {
+    grid-area: t6;
+    border-radius: 10px 0 0 10px;
+}
+
+
+
+section.sobre .i7 {
+    grid-area: i7;
+    border-radius: 10px 0 0 10px;
+}
+
+section.sobre .t7 {
+    grid-area: t7;
+    border-radius: 0 10px 10px 0;
+}
+
+
+
+section.sobre .i8 {
+    grid-area: i8;
+    border-radius: 0 10px 10px 0;
+}
+
+section.sobre .t8 {
+    grid-area: t8;
+    border-radius: 10px 0 0 10px;
+}
+
+section.sobre .grid-content .content {
+    padding: 20px 50px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section.sobre .grid-content .content p {
+    color: white;
+    font-size: 1.1em;
+    text-align: justify;
+}
+
+
+
+section.midia {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 100px;
+}
+
+/* ----------------------------------------------------------- */
+
+/* ------------------------- FOOTER -------------------------- */
+footer {
+    grid-area: footer;
+
+    background: #13002B;
+
+    height: auto;
+    width: 100%;
+
+    position: relative;
+    z-index: 0;
+}
+
+footer .foot_container {
+    padding: 50px 200px;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 50px;
+}
+
+footer .foot_container .content {
+    color: white;
+    width: 33.3%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer .foot_container .content ul li {
+    list-style: none;
+}
+
+footer .foot_container .content ul li a {
+    color: white;
+
+    text-decoration: none;
+    transition: .3s;
+}
+
+footer .foot_container .content ul li a:hover {
+    color: #6042D8;
+}
+
+footer .copy {
+    background-color: #6042D8;
+    width: 100%;
+    height: 8vh;   
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .copy p, .copy a {
+    color: white;
+    font-size: 1.1em;
+    letter-spacing: 1px;
+
+    text-decoration: none;
+    transition: .3s;
+}
+
+footer .copy a:hover {
+    color: #1e0055;
+} 
+
+/* ----------------------------------------------------------- */
 
 /* ------------------------- QUIZ ------------------------- */
 .caixa {
