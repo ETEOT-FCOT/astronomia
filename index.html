@@ -4,19 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/space-eteot-logo.ico" type="image/x-icon">
 
     <!-- CSS DO PROJETO -->
     <link rel="stylesheet" href="css/style.css">
 
     <!-- TITULO DO PROJETO -->
-    <title>Document</title>
+    <title>FCOT-2151</title>
 </head>
 <body>
-    <div class="container">
+    <div class="container responsivo">
         <header>
-            <nav>
-                <a href="index.html"><img class="logo_type" src="img/logo_type.png"></a>
-                <ul>
+            <a href="index.html"><img class="logo_type" src="img/logo_type.png"></a>
+
+            <nav id="nav">
+                <button id="btn-mobile">
+                    <span id="hamburguer"></span>
+                </button>
+
+                <ul id="menu">
                     <li><a href="index.html" class="active">Home</a></li>
                     <li><a href="midia.html">Vídeos</a></li>
                     <li><a href="quiz.html">Quiz</a></li> 
@@ -24,7 +30,7 @@
             </nav> <!-- nav -->
         </header> <!-- header -->
 
-        <main class="home">
+        <main class="home responsivo">
             <img src="img/dec_home.png">
 
             <div class="content">
@@ -33,9 +39,9 @@
             </div>
         </main> <!-- main -->
 
-        <section class="home">
+        <section class="home responsivo">
             <div class="content">
-                <p class="paragraph">O sistema solar é um aglomerado de planetas, meteoroides, cometas, e vários outros corpos celestes em torno de uma estrela: o Sol. Com cerca de cinco bilhões de anos, o sol é o centro de nosso sistema solar. Apenas um minúsculo pedaço de uma Galáxia chamada Via Láctea que contém outros bilhões de estrelas tão ou até mais brilhantes que o nosso astro rei (são mais de 200 bilhões de estrelas, sendo que a mais próxima do sol, a Próxima Centauri, está a 4,3 anos luz dele).<br><br>O nosso sistema solar é oficialmente formado por oito planetas: Mercúrio, Vênus, Terra, Marte, Júpiter, Saturno, Urano e Netuno. Até 2006, Plutão era considerado o nono planeta do sistema solar. Entretanto a descoberta do Cinturão de Kuiper, uma região logo depois de Plutão, fez com que a União Astronômica Internacional criasse uma definição para planeta que exclui Plutão, classificando-o de acordo com a nova definição, como um “planeta-anão”. Assim como Plutão, outros dois corpos celestes, Ceres e Éris, que antes eram considerados asteroides, passaram a ser considerados planetas-anões. Se considerarmos suas distâncias a partir do sol, Ceres está localizada entre Marte e Júpiter, e Éris logo depois de Plutão, já no Cinturão de Kuiper.</p>
+                <p class="paragraph homep">O Sistema Solar é um aglomerado de planetas, meteoroides, cometas, e vários outros corpos celestes em torno de uma estrela: o Sol. Com cerca de cinco bilhões de anos, o Sol é o centro de nosso Sistema Solar. Apenas um minúsculo pedaço de uma Galáxia chamada Via Láctea que contém outros bilhões de estrelas tão ou até mais brilhantes que o nosso astro rei (são mais de 200 bilhões de estrelas, sendo que a mais próxima do sol, a Próxima Centauri, está a 4,3 anos luz dele).<br><br>O nosso sistema solar é oficialmente formado por oito planetas: Mercúrio, Vênus, Terra, Marte, Júpiter, Saturno, Urano e Netuno. Até 2006, Plutão era considerado o nono planeta do sistema solar. Entretanto a descoberta do Cinturão de Kuiper, uma região logo depois de Plutão, fez com que a União Astronômica Internacional criasse uma definição para planeta que exclui Plutão, classificando-o de acordo com a nova definição, como um “planeta-anão”. Assim como Plutão, outros dois corpos celestes, Ceres e Éris, que antes eram considerados asteroides, passaram a ser considerados planetas-anões. Se considerarmos suas distâncias a partir do sol, Ceres está localizada entre Marte e Júpiter, e Éris logo depois de Plutão, já no Cinturão de Kuiper.</p>
             </div> <!-- content -->
 
             <div class="content">
@@ -94,18 +100,18 @@
                 </div> <!-- card-content -->
             </div> <!-- content -->
 
-            <div class="content">
+            <div class="content ultimghome">
                 <div>
-                    <img width="80%" src="img/img_home.png"> 
+                    <img width="80%" src="img/img_home.png" class="img_home"> 
                 </div>
 
                 <div>
-                    <p>Da nebulosa que deu origem ao nosso sistema solar, cerca de 99,9% da massa original formou o Sol, os 0,1% restantes formou todos os outros planetas e corpos deste sistema, sendo que só Júpiter tem mais que o dobro da massa de todos os outros planetas do sistema solar juntos.</p>
+                    <p>Da nebulosa que deu origem ao nosso Sistema Solar, cerca de 99,9% da massa original formou o Sol, os 0,1% restantes formou todos os outros planetas e corpos deste sistema, sendo que só Júpiter tem mais que o dobro da massa de todos os outros planetas do Sistema Solar juntos.</p>
                 </div>
             </div>
         </section> <!-- section -->
 
-        <footer>
+        <footer class="responsivo">
             <div class="foot_container">
                 <div class="content">
                     <h1>Sobre nós</h1>
@@ -114,9 +120,9 @@
                 </div>
 
                 <div class="content">
-                    <h1>Desenvolvedors</h1>
+                    <h1>Desenvolvedores</h1>
 
-                    <p>Rodrigo Santos<br>Lucas Poeys<br>Luis Felipe<br>Leonardo Sales<br>Andrei Monteiro</p>
+                    <p>Rodrigo Santos<br>Lucas Poeys<br>Leonardo Sales<br>Luis Felipe<br>Andrei Monteiro</p>
                 </div>
 
                 <div class="content">

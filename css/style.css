@@ -1,5 +1,4 @@
 /* ------------------ RESET -------------------- */
-
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Righteous&display=swap');
 /* 
 font-family: 'Inter', sans-serif;
@@ -51,6 +50,10 @@ header {
     height: auto;
     width: 100%;
 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
     position: absolute;
     z-index: 10;
 }
@@ -96,6 +99,11 @@ header nav ul li a:hover {
     background: white;
     color: #001b38;
 }
+
+#btn-mobile {
+    display: none;
+}
+
 
 /* ----------------------------------------------- */
 
@@ -263,6 +271,11 @@ main.midia .content {
     text-align: center;
 }
 
+.videovr {
+    width: 1000px;
+    height: 500px;
+}
+
 /* ---------------------------------------------------------- */
 
 /* ------------------------ SECTION ------------------------- */
@@ -281,6 +294,7 @@ section {
 section.home .content:nth-child(1) {
     padding: 50px 150px;
 }
+
 
 section.home .paragraph {
     color: var(--purple-text);
@@ -681,6 +695,7 @@ footer .copy a:hover {
     margin: 100px auto;
     color: white;
 }
+
 .opcao {
     background-color: white;
     margin-top: 12px;
@@ -696,11 +711,13 @@ footer .copy a:hover {
     transition: .3s;
     cursor: pointer;
 }
+
 .opcao:hover {
     border-color: #001b38;
     background-color: white;
     transform: scale(1.1);
 }
+
 .botao {
     font-size: large;
     margin-left: 0;
@@ -732,6 +749,163 @@ input:checked {
     display: none;
 }
 
-#pergunta2, #pergunta3, #pergunta4, #pergunta5, #pergunta6, #pergunta7, #pergunta8, #pergunta9, #pergunta10, #pergunta11, #pergunta12, #pergunta13, #pergunta14, #pergunta15, #pergunta16, #pergunta17, #pergunta18, #pergunta19, #pergunta20 {
+#pergunta2, #pergunta3, #pergunta4, #pergunta5, #pergunta6, #pergunta7, #pergunta8, #pergunta9, #pergunta10, #pergunta11, #pergunta12, #pergunta13, #pergunta14, #pergunta15, #pergunta16, #pergunta17, #pergunta18, #pergunta19, #pergunta20, #final {
     display: none;
+}
+
+#msgcell {
+    display: none;
+}
+
+.somepc {
+    display: none;
+}
+
+.somecell {
+    display: block;
+}
+
+/*Celular*/
+
+@media screen and (max-width: 768px) {
+    #btn-mobile {
+        display: flex;
+        padding: .5rem 1rem;
+        font-size: 1rem;
+        border: none;
+        background: none;
+        cursor: pointer;
+        gap: .5rem;
+        color: white;
+    }
+
+    #btn-mobile:hover {
+        color: #6042D8;
+    }
+
+    #hamburguer {
+        display: block;
+        width: 20px;
+        border-top: 2px solid;
+    }
+
+    #hamburguer::after, #hamburguer::before {
+        content: "";
+        display: block;
+        width: 20px;
+        height: 2px;
+        background: currentColor;
+        margin-top: 5px;
+        transition: .5s;
+        position: relative;
+    }
+
+    #nav.active #hamburguer {
+        border: none;
+    }
+
+    #nav.active #hamburguer::after {
+        transform: rotate(-135deg);
+        top: -7px;
+    }
+
+    #nav.active #hamburguer::before {
+        transform: rotate(135deg);
+    }
+
+    #nav.active #menu {
+        width: 70%;
+        position: fixed;
+    }
+
+    #nav.active #menu li {
+        display: block;
+    }
+
+
+    
+    .responsivo {
+        width: calc(100vw - 15px);
+        font-size: 15px;
+        
+    }
+
+    #pergunta1 {
+        display: none;
+    }
+
+    #msgcell {
+        display: block;
+    }
+
+    .caixamsg {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    main.quiz img.astronaut {
+        width: 70%;
+        top: 50%;
+    }
+
+    main.quiz .content {
+        text-align: center;
+        margin: auto;
+        top: 20vh;
+    }
+
+    .textoquiz {
+        left: 120px;
+        text-align: center;
+    }
+
+    section.home .content:nth-child(1), section .content {
+        padding: 30px;
+    }
+
+    .videovr {
+        width: 400px;
+        height: 225px;
+    }
+
+    section.sobre .grid-content {
+        padding: 20px;
+        
+        row-gap: 0;
+        grid-template-columns: 1fr;
+    
+        grid-template-areas: "i1"
+                             "t1"
+                             "i2"
+                             "t2"
+                             "i3"
+                             "t3"
+                             "i4"
+                             "t4"
+                             "i5"
+                             "t5"
+                             "i6"
+                             "t6"
+                             "i7"
+                             "t7"
+                             "i8"
+                             "t8";
+    }
+
+    section.sobre .i1, section.sobre .i2, section.sobre .i3, section.sobre .i4, section.sobre .i5, section.sobre .i6, .i7, section.sobre .i8 {
+        border-radius: 10px 10px 0 0;
+    }
+
+    section.sobre .t1, section.sobre .t2, section.sobre .t3, section.sobre .t4, section.sobre .t5, section.sobre .t6, .t7, section.sobre .t8 {
+        border-radius: 0 0 10px 10px;
+        margin-bottom: 100px;
+    }
+
+    section.sobre .grid-content .content {
+        padding: 20px;
+    }
+
+    section.sobre .grid-content div {
+        height: 42vh;
+    }
 }
