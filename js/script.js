@@ -1,14 +1,41 @@
-// MOSTRAR E ESCONDER NAVBAR RESPONSIVO
-const btnMobile = document.getElementById("btn-mobile");
+function toggleMenu1() {
+    let nav1 = document.getElementById("nav1");
 
-function toggleMenu(event) {
-    if (event.type === "touchstart") event.preventdefault();
-    const nav = document.getElementById("nav");
-    nav.classList.toggle("active");
+    nav1.classList.toggle("on");
 }
 
-btnMobile.addEventListener("click", toggleMenu);
-btnMobile.addEventListener("touchstart", toggleMenu); 
+function toggleMenu2() {
+    let nav2 = document.getElementById("nav2");
+
+    nav2.classList.toggle("on");
+}
+
+function toggleMenu3() {
+    let nav3 = document.getElementById("nav3");
+
+    nav3.classList.toggle("on");
+}
+
+function toggleMenu4() {
+    let nav4 = document.getElementById("nav4");
+
+    nav4.classList.toggle("on");
+}
+
+function toggleMenu5() {
+    let nav5 = document.getElementById("nav5");
+
+    nav5.classList.toggle("on");
+}
+
+function toggleMenu6() {
+    let nav6 = document.getElementById("nav6");
+
+    nav6.classList.toggle("on");
+}
+
+
+/////////////////////////////////////////////////////////////////////
 
 function resposta() {
     let resp = document.getElementsByName("resp");

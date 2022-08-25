@@ -13,11 +13,16 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="container responsivo">
+    <div class="container">
         <header>
-            <nav>
-                <a href="../index.html"><img class="logo_type" src="../img/logo_type.png"></a>
-                <ul>
+            <a href="../index.html"><img class="logo_type" src="../img/logo_type.png"></a>
+
+            <nav id="nav6">
+                <button onclick="toggleMenu6(this)" id="btn-mobile6">
+                    <span id="hamburguer6"></span>
+                </button>
+
+                <ul id="menu6">
                     <li><a href="../index.html">Home</a></li>
                     <li><a href="../midia.html">Vídeos</a></li>
                     <li><a href="../quiz.html">Quiz</a></li> 
@@ -25,7 +30,7 @@
             </nav> <!-- nav -->
         </header> <!-- header -->
 
-        <main class="sobre responsivo">
+        <main class="sobre back_responsive">
             <img src="../img/dec_sobre.png">
 
             <div class="content">
@@ -34,7 +39,7 @@
             </div>
         </main> <!-- main -->
 
-        <section class="sobre responsivo">
+        <section class="sobre back_responsive">
             <div class="grid-content">
                 <div class="i1">
                     <img class="i1" src="../img/mercury_sobre.png">
@@ -116,16 +121,41 @@
             </div>
         </section> <!-- section -->
 
-        <footer>
-            <div >
+        
+        
+        <footer class="back_responsive">
+            <div class="foot_container dark">
+                <dvi class="content">
+                    <img src="../img/space-eteot-logo.ico">
+                </dvi>
 
+                <div class="content">
+                    <h1>Sobre nós</h1>
+
+                    <p>Turma: 2151<br>Curso: TI<br>Ano: 2022</p>
+                </div>
+
+                <div class="content">
+                    <h1>Desenvolvedores</h1>
+
+                    <p>Rodrigo Santos<br>Lucas Poeys<br>Leonardo Sales<br>Luis Felipe<br>Andrei Monteiro</p>
+                </div>
+
+                <div class="content">
+                    <h1>Navegação</h1>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../midia.html">Vídeos</a></li>
+                        <li><a href="../quiz.html">Quiz</a></li> 
+                    </ul>
+                </div>
             </div>
-            <div >
-                <p>Copyrigth&copy; <a href="index.html">Feira de Ciências 2151</a></p>
+            <div class="copy">
+                <p>Copyrigth&copy; <a href="../index.html">Feira de Ciências 2151</a></p>
             </div>
         </footer> <!-- footer -->
     </div>
 
-    <script src="js/script.js"></script> <!-- javascript -->
+    <script src="../js/script.js"></script> <!-- javascript -->
 </body>
 </html>

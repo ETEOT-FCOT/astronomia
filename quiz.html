@@ -15,9 +15,14 @@
 <body>
     <div class="container">
         <header>
-            <nav>
-                <a href="index.html"><img class="logo_type" src="img/logo_type.png"></a>
-                <ul>
+            <a href="index.html"><img class="logo_type" src="img/logo_type.png"></a>
+
+            <nav id="nav3">
+                <button onclick="toggleMenu3(this)" id="btn-mobile3">
+                    <span id="hamburguer3"></span>
+                </button>
+
+                <ul id="menu3">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="midia.html">Vídeos</a></li>
                     <li><a href="quiz.html" class="active">Quiz</a></li> 
@@ -25,7 +30,7 @@
             </nav> <!-- nav -->
         </header> <!-- header -->
 
-        <main class="quiz responsivo">
+        <main class="quiz back_responsive">
             <img class="astronaut" src="img/astronaut_quiz.png">
             <img class="dec" src="img/dec_quiz.png">
 
@@ -938,7 +943,7 @@
             </div>
         </section>
 
-        <section id="msgcell" class="responsivo">
+        <section id="msgcell" class="back_responsive">
             
             <div class="caixa caixamsg">
                 
@@ -967,12 +972,17 @@
             </div>
         </section>
 
-        <footer class="responsivo">
-            <div class="foot_container">
+        
+        <footer class="back_responsive">
+            <div class="foot_container dark">
+                <dvi class="content">
+                    <img src="img/space-eteot-logo.ico">
+                </dvi>
+
                 <div class="content">
                     <h1>Sobre nós</h1>
 
-                    <p>Turma: 2151</p>
+                    <p>Turma: 2151<br>Curso: TI<br>Ano: 2022</p>
                 </div>
 
                 <div class="content">
@@ -982,9 +992,9 @@
                 </div>
 
                 <div class="content">
-                    <h1></h1>
+                    <h1>Navegação</h1>
                     <ul>
-                        <li><a href="index.html" class="active">Home</a></li>
+                        <li><a href="index.html">Home</a></li>
                         <li><a href="midia.html">Vídeos</a></li>
                         <li><a href="quiz.html">Quiz</a></li> 
                     </ul>
