@@ -840,7 +840,30 @@ input:checked {
 
 /*Celular*/
 
+@media screen and (max-width: 1200px) {
+    @media screen and (max-height: 1024px) {
+        
+        section.sobre .grid-content {
+            padding: 100px 150px;
 
+            grid-template-columns: 1fr 1fr;
+            
+        
+            grid-template-areas: "i1 t1"
+                                 "t2 i2"
+                                 "i3 t3"
+                                 "t4 i4"
+                                 "i5 t5"
+                                 "t6 i6"
+                                 "i7 t7" 
+                                 "t8 i8";
+        }
+        
+        section.sobre .grid-content div {
+            height: 45vh;
+        }
+    }
+}
 
 @media screen and (max-width: 768px) {
     .back_responsive {
@@ -1154,27 +1177,3 @@ input:checked {
     }      
 }
 
-@media screen and (max-width: 1200px) {
-    @media screen and (max-height: 1024px) {
-        
-        section.sobre .grid-content {
-            padding: 100px 150px;
-
-            grid-template-columns: 1fr 1fr;
-            
-        
-            grid-template-areas: "i1 t1"
-                                 "t2 i2"
-                                 "i3 t3"
-                                 "t4 i4"
-                                 "i5 t5"
-                                 "t6 i6"
-                                 "i7 t7" 
-                                 "t8 i8";
-        }
-        
-        section.sobre .grid-content div {
-            height: 45vh;
-        }
-    }
-}
